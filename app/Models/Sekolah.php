@@ -10,6 +10,7 @@ class Sekolah extends Model
     use HasFactory;
 
     protected $table = 'sekolah';
+    protected $primaryKey = 'npsn';
     public $incrementing = false;
     public $timestamps = false;
     protected $fillable = [
@@ -25,6 +26,31 @@ class Sekolah extends Model
         'no_hp',
         'pagu',
         'akreditasi',
-        'kepsek'
+        'kepsek',
     ];
+
+    public function provinsi()
+    {
+        return $this->belongsTo(Provinsi::class);
+    }
+
+    public function kota()
+    {
+        return $this->belongsTo(Kota::class);
+    }
+
+    public function kecamatan()
+    {
+        return $this->belongsTo(Kecamatan::class);
+    }
+
+    public function kelurahan()
+    {
+        return $this->belongsTo(Kelurahan::class);
+    }
+
+    public function kodepos()
+    {
+        return $this->belongsTo(Kodepos::class);
+    }
 }

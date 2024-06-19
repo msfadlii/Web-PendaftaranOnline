@@ -19,7 +19,8 @@ class LoginController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nik' => 'required|max:16',
-            'password' => 'required'
+            'password' => 'required|confirmed|min:3',
+            'confirm_password' => 'required'
         ]);
 
         $dataLogin = [
@@ -49,7 +50,7 @@ class LoginController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nik' => 'required|max:16|unique:users',
-            'password' => 'required|confirmed'
+            'password' => 'required'
         ]);
 
         $dataLogin = [

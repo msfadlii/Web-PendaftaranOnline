@@ -3,7 +3,10 @@
 @section('main-content')
 
     <h1 class="h3 mb-4 text-gray-800">Data Sekolah</h1>
-
+    <div class="">
+        <a href="{{ route('sekolah.create') }}" class="btn btn-outline-success" >Tambah Data</a>
+        <a href="{{ route('admin.logout') }}" class="btn btn-outline-success" >Logout</a>
+    </div>
     <div class="table-responsive">
         <table class="table table-light table-hover">
             <thead>
@@ -20,7 +23,7 @@
             </thead>
             <tbody>
                 @foreach ($data_sekolah as $index => $sekolah)
-                <tr>
+                <tr onclick="window.location='{{ route('sekolah.show', $sekolah->npsn) }}'">
                     <th scope="row">{{ $index + 1 }}</th>
                     <th>{{ $sekolah->npsn }}</th>
                     <th>{{ $sekolah->nama_sekolah }}</th>

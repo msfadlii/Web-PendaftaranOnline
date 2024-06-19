@@ -52,6 +52,9 @@
                                             <div class="form-floating mb-3">
                                                 <input type="password" class="form-control" name="confirm_password" id="confirm_password" value="" placeholder="Confirm Password" >
                                                 <label for="password" class="form-label">Confirm Password</label>
+                                                @error('confirm_password')
+                                                    <p class="invalid-feedback">{{ $message }}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-12">

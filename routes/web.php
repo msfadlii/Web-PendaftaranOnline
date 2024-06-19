@@ -25,8 +25,18 @@ Route::group(['prefix' => ''], function() {
     });
 });
 
-Route::get('admin/login', [AdminsLoginController::class, 'index'])->name('admin.login');
-Route::get('admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-Route::get('admin/data-sekolah', [AdminsSekolahController::class, 'index'])->name('sekolah');
-Route::post('admin/authenticate', [AdminsLoginController::class, 'authenticate'])->name('admin.autentikasi');
-Route::get('admin/logout', [AdminsLoginController::class, 'logout'])->name('admin.logout');
+Route::group(['prefix' => 'admin'], function() {
+    Route::group(['middleware' => 'admin.guest'], function(){
+        Route::get('login', [AdminsLoginController::class, 'index'])->name('admin.login');
+        Route::post('authenticate', [AdminsLoginController::class, 'authenticate'])->name('admin.autentikasi');
+    });
+    Route::group(['middleware' => 'admin.auth'], function(){
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+        Route::get('logout', [AdminsLoginController::class, 'logout'])->name('admin.logout');
+        Route::get('data-sekolah', [AdminsSekolahController::class, 'index'])->name('sekolah.index');
+        Route::get('data-sekolah/{npsn}', [AdminsSekolahController::class, 'show'])->name('sekolah.show');
+        Route::get('create-sekolah', [AdminsSekolahController::class, 'create'])->name('sekolah.create');
+        Route::post('store-sekolah', [AdminsSekolahController::class, 'store'])->name('sekolah.store');
+        // Route::resource('/sekolah', AdminsSekolahController::class);
+    });
+});
