@@ -9,8 +9,6 @@
 
 ## Instalasi ⚒️
 
-Installing and running Sneat is super easy, please Follow below steps and you will be ready to rock 🤘
-
 1. Clone repository atau download zip repository 
 2. Buka terminal dan masukkan direktori folder laravel, ketik perintah :
 
