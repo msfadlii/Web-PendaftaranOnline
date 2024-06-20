@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel 11 Multi Auth</title>
+        <title>Halaman Login</title>
         <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     </head>
     <body class="bg-light">
@@ -23,7 +23,7 @@
                                             <div class="alert alert-danger">{{ Session::get('error') }}</div>
                                         @endif
                                         <div class="mb-5">
-                                            <h4 class="text-center">Login Here</h4>
+                                            <h4 class="text-center">Login Peserta Didik Baru</h4>
                                         </div>
                                     </div>
                                 </div>

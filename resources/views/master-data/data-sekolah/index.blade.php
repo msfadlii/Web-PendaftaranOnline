@@ -5,7 +5,6 @@
     <h1 class="h3 mb-4 text-gray-800">Data Sekolah</h1>
     <div class="">
         <a href="{{ route('sekolah.create') }}" class="btn btn-outline-success" >Tambah Data</a>
-        <a href="{{ route('admin.logout') }}" class="btn btn-outline-success" >Logout</a>
     </div>
     <div class="table-responsive">
         <table class="table table-light table-hover">
@@ -32,8 +31,14 @@
                     <th>{{ $sekolah->akreditasi }}</th>
                     <th>{{ $sekolah->kepsek }}</th>
                     <th>
-                        <button>Edit</button> | 
-                        <button>Hapus</button>
+                        <a href="{{ route('sekolah.edit', $sekolah->npsn) }}">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                        </a> |
+                        <form action="{{ route('sekolah.delete', $sekolah->npsn) }}" method="post" style="display:inline-block;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
+                        </form>
                     </th>
                 </tr>
                 @endforeach

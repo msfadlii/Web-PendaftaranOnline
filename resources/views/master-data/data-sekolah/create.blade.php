@@ -137,7 +137,7 @@
 
     <div class="form-group mb-3">
         <label class="font-weight-bold">Akreditasi</label>
-        <select class="form-control" name="akreditasi" id="akreditasi">
+        <select class="form-control" name="akreditasi" id="akreditasi" required>
             <option value="A">A</option>
             <option value="B">B</option>
             <option value="C">C</option>

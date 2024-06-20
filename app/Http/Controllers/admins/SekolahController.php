@@ -34,7 +34,7 @@ class SekolahController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'npsn' => 'required',
+            'npsn' => 'required|integer',
             'nama_sekolah' => 'required',
             'alamat_sekolah' => 'required',
             'provinsi_id' => 'required',
@@ -42,9 +42,9 @@ class SekolahController extends Controller
             'kecamatan_id' => 'required',
             'kelurahan_id' => 'required',
             'kodepos_id' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'no_hp' => 'required',
-            'pagu' => 'required',
+            'pagu' => 'required|integer',
             'akreditasi' => 'required',
             'kepsek' => 'required',
         ]);
@@ -53,11 +53,11 @@ class SekolahController extends Controller
             'npsn' => $request->npsn,
             'nama_sekolah' => $request->nama_sekolah,
             'alamat_sekolah' => $request->alamat_sekolah,
-            'provinsi_id' => 1,
-            'kota_id' => 1,
-            'kecamatan_id' => 1,
-            'kelurahan_id' => 1,
-            'kodepos_id' => 1,
+            'provinsi_id' => $request->input('provinsi_id'),
+            'kota_id' => $request->input('kota_id'),
+            'kecamatan_id' => $request->input('kecamatan_id'),
+            'kelurahan_id' => $request->input('kelurahan_id'),
+            'kodepos_id' => $request->input('kodepos_id'),
             'email' => $request->email,
             'no_hp' => $request->no_hp,
             'pagu' => $request->pagu,
@@ -75,18 +75,49 @@ class SekolahController extends Controller
         return view('master-data.data-sekolah.show', compact('sekolah'));
     }
 
-    public function edit()
-    {
+    public function edit($npsn)
+    {   
+        $sekolah = Sekolah::with(['provinsi', 'kota', 'kecamatan', 'kelurahan', 'kodepos'])->where('npsn', $npsn)->firstOrFail();
 
+        $provinsi = Provinsi::all();
+        $kota = Kota::all();
+        $kecamatan = Kecamatan::all();
+        $kelurahan = Kelurahan::all();
+        $kodepos = KodePos::all();
+
+        return view('master-data.data-sekolah.edit', compact('sekolah', 'provinsi', 'kota', 'kecamatan', 'kelurahan', 'kodepos'));
     }
 
-    public function update()
+    public function update(Request $request, $npsn)
     {
+        $request->validate([
+            'npsn' => 'required|integer',
+            'nama_sekolah' => 'required',
+            'alamat_sekolah' => 'required',
+            'provinsi_id' => 'required',
+            'kota_id' => 'required',
+            'kecamatan_id' => 'required',
+            'kelurahan_id' => 'required',
+            'kodepos_id' => 'required',
+            'email' => 'required|email',
+            'no_hp' => 'required',
+            'pagu' => 'required|integer',
+            'akreditasi' => 'required',
+            'kepsek' => 'required',
+        ]);
 
+        $sekolah = Sekolah::where('npsn', $npsn)->firstOrFail();
+        $sekolah->update($request->all());
+
+        return redirect()->route('sekolah.index')->with('success', 'Data sekolah berhasil diperbarui.');
     }
 
-    public function destroy()
+    public function destroy($npsn)
     {
+        $sekolah = Sekolah::findOrFail($npsn);
 
+        $sekolah->delete();
+
+        return redirect()->route('sekolah.index')->with('success', 'Data sekolah berhasil dihapus');
     }
 }

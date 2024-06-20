@@ -20,4 +20,9 @@ class Kelurahan extends Model
     {
         return $this->hasMany(Sekolah::class);
     }
+
+    public function detailUser()
+    {
+        return $this->hasMany(DetailUser::class);
+    }
 }

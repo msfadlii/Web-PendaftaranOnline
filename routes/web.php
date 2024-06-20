@@ -4,6 +4,7 @@ use App\Http\Controllers\admins\DashboardController;
 use App\Http\Controllers\admins\LoginController as AdminsLoginController;
 use App\Http\Controllers\admins\SekolahController as AdminsSekolahController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -33,10 +34,19 @@ Route::group(['prefix' => 'admin'], function() {
     Route::group(['middleware' => 'admin.auth'], function(){
         Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
         Route::get('logout', [AdminsLoginController::class, 'logout'])->name('admin.logout');
+        
         Route::get('data-sekolah', [AdminsSekolahController::class, 'index'])->name('sekolah.index');
         Route::get('data-sekolah/{npsn}', [AdminsSekolahController::class, 'show'])->name('sekolah.show');
         Route::get('create-sekolah', [AdminsSekolahController::class, 'create'])->name('sekolah.create');
         Route::post('store-sekolah', [AdminsSekolahController::class, 'store'])->name('sekolah.store');
-        // Route::resource('/sekolah', AdminsSekolahController::class);
+        Route::get('edit-sekolah/{npsn}/edit', [AdminsSekolahController::class, 'edit'])->name('sekolah.edit');
+        Route::put('edit-sekolah/{npsn}', [AdminsSekolahController::class, 'update'])->name('sekolah.update');
+        Route::delete('delete-sekolah/{npsn}', [AdminsSekolahController::class, 'destroy'])->name('sekolah.delete');
+
+        Route::get('data-siswa', [SiswaController::class, 'index'])->name('siswa.index');
+        Route::get('data-siswa/{users_nik}', [SiswaController::class, 'show'])->name('siswa.show');
+        Route::get('edit-siswa/{users_nik}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
+        Route::put('edit-siswa/{users_nik}', [SiswaController::class, 'update'])->name('siswa.update');
+        Route::delete('delete-siswa/{users_nik}', [SiswaController::class, 'destroy'])->name('siswa.delete');
     });
 });

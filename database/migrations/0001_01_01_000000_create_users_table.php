@@ -57,7 +57,8 @@ return new class extends Migration
             $table->string('users_nik');
             $table->string('nama');
             $table->unsignedBigInteger('jk_id');
-            $table->string('ttl');
+            $table->string('tempatLahir');
+            $table->date('tglLahir');
             $table->string('alamat');
             $table->integer('rt');
             $table->integer('rw');
