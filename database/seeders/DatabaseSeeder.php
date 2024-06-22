@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
             KelurahanSeeder::class,
             KodePosSeeder::class,
             SekolahSeeder::class,
+            SiswaSeeder::class,
+            PendaftaranSeeder::class,
         ]);
     }
 }
