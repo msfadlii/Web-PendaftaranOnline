@@ -47,9 +47,14 @@ DB_PASSWORD=
 
 ```bash
 php artisan migrate
-``` 
+```
 
-7. Untuk menjalankan program laravel gunakan perintah :
+7. Jalankan perintah seed :
+```bash
+php artisan db:seed
+```
+
+8. Untuk menjalankan program laravel gunakan perintah :
 
 ```bash
 php artisan serve
