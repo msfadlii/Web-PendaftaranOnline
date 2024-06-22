@@ -22,15 +22,39 @@ composer install
 php artisan key:generate
 ```
 
-4. Buat database MySQL sama kan dengan isi DB_DATABASE di file .env
+4. Buat database MySQL
 
-5. Jalankan perintah migrate :
+5. Ganti nama file .env.example menjadi .env, kemudian ubah isinya
+```
+DB_CONNECTION=sqlite
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=laravel
+# DB_USERNAME=root
+# DB_PASSWORD=
+```
+menjadi :
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+6. Jalankan perintah migrate :
 
 ```bash
 php artisan migrate
-``` 
+```
 
-6. Untuk menjalankan program laravel gunakan perintah :
+7. Jalankan perintah seed :
+```bash
+php artisan db:seed
+```
+
+8. Untuk menjalankan program laravel gunakan perintah :
 
 ```bash
 php artisan serve
