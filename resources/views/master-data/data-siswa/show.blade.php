@@ -3,128 +3,131 @@
 @section('main-content')
 <div class="container mt-5">
     <div class="card">
-        <div class="card-header">
-            <h2>Detail Siswa</h2>
+        <div class="card-header bg-primary text-white d-flex ">
+            <a href="{{ route('siswa.index') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </a>
+            <h2 class="mb-0" style="margin-left: 20px;">Detail Siswa</h2>
         </div>
         <div class="card-body">
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>NIK:</strong>
+                    <strong>NIK</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->users_nik }}
+                    : {{ $siswa->users_nik }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Nama:</strong>
+                    <strong>Nama</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->nama }}
+                    : {{ $siswa->nama }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Jenis Kelamin:</strong>
+                    <strong>Jenis Kelamin</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->jenisKelamin->jk }}
+                    : {{ $siswa->jenisKelamin->jk }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Tempat Lahir:</strong>
+                    <strong>Tempat Lahir</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->tempatLahir }}
+                    : {{ $siswa->tempatLahir }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Tanggal Lahir:</strong>
+                    <strong>Tanggal Lahir</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->tglLahir }}
+                   : {{ $siswa->tglLahir }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Alamat:</strong>
+                    <strong>Alamat</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->alamat }}
+                    : {{ $siswa->alamat }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>RT:</strong>
+                    <strong>RT</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->rt }}
+                   : {{ $siswa->rt }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>RW:</strong>
+                    <strong>RW</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->rw }}
+                    : {{ $siswa->rw }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Provinsi:</strong>
+                    <strong>Provinsi</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->provinsi->nama }}
+                    : {{ $siswa->provinsi->nama }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Kota:</strong>
+                    <strong>Kota</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->kota->nama }}
+                    : {{ $siswa->kota->nama }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Kecamatan:</strong>
+                    <strong>Kecamatan</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->kecamatan->nama }}
+                    : {{ $siswa->kecamatan->nama }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Kelurahan:</strong>
+                    <strong>Kelurahan</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->kelurahan->nama }}
+                    : {{ $siswa->kelurahan->nama }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Kode Pos:</strong>
+                    <strong>Kode Pos</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->kodepos->kode }}
+                    : {{ $siswa->kodepos->kode }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Nama Orang Tua:</strong>
+                    <strong>Nama Orang Tua</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->ortu }}
+                    : {{ $siswa->ortu }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>No HP Orang Tua:</strong>
+                    <strong>No HP Orang Tua</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $siswa->no_hp }}
+                    : {{ $siswa->no_hp }}
                 </div>
             </div>
         </div>

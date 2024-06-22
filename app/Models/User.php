@@ -52,4 +52,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(DetailUser::class, 'users_nik', 'nik');
     }
+
+    public function pendaftaran()
+    {
+        return $this->hasOne(Pendaftaran::class, 'users_nik', 'nik');
+    }
 }

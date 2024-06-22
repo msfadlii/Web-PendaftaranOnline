@@ -3,112 +3,115 @@
 @section('main-content')
 <div class="container mt-5">
     <div class="card">
-        <div class="card-header">
-            <h2>Detail Sekolah</h2>
+        <div class="card-header bg-primary text-white d-flex ">
+            <a href="{{ route('sekolah.index') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </a>
+            <h2 class="mb-0" style="margin-left: 20px;">Detail Sekolah</h2>
         </div>
         <div class="card-body">
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>NPSN:</strong>
+                    <strong>NPSN</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->npsn }}
+                    : {{ $sekolah->npsn }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Nama:</strong>
+                    <strong>Nama Sekolah</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->nama_sekolah }}
+                    : {{ $sekolah->nama_sekolah }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Alamat:</strong>
+                    <strong>Alamat Sekolah</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->alamat_sekolah }}
+                    : {{ $sekolah->alamat_sekolah }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Provinsi:</strong>
+                    <strong>Provinsi</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->provinsi->nama }}
+                    : {{ $sekolah->provinsi->nama }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Kota:</strong>
+                    <strong>Kota</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->kota->nama }}
+                    : {{ $sekolah->kota->nama }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Kecamatan:</strong>
+                    <strong>Kecamatan</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->kecamatan->nama }}
+                    : {{ $sekolah->kecamatan->nama }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Kelurahan:</strong>
+                    <strong>Kelurahan</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->kelurahan->nama }}
+                    : {{ $sekolah->kelurahan->nama }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Kode Pos:</strong>
+                    <strong>Kode Pos</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->kodepos->kode }}
+                    : {{ $sekolah->kodepos->kode }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Email:</strong>
+                    <strong>Email</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->email }}
+                    : {{ $sekolah->email }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>No HP:</strong>
+                    <strong>Nomor Hp</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->no_hp }}
+                    : {{ $sekolah->no_hp }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Pagu:</strong>
+                    <strong>Pagu</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->pagu }}
+                    : {{ $sekolah->pagu }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Akreditasi:</strong>
+                    <strong>Akreditasi</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->akreditasi }}
+                    : {{ $sekolah->akreditasi }}
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-md-4">
-                    <strong>Kepala Sekolah:</strong>
+                    <strong>Kepala Sekolah</strong>
                 </div>
                 <div class="col-md-8">
-                    {{ $sekolah->kepsek }}
+                    : {{ $sekolah->kepsek }}
                 </div>
             </div>
         </div>

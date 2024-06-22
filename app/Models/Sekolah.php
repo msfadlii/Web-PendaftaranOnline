@@ -53,4 +53,14 @@ class Sekolah extends Model
     {
         return $this->belongsTo(Kodepos::class);
     }
+
+    public function pendaftaranPilihan1()
+    {
+        return $this->hasMany(Pendaftaran::class, 'pilihan1_sekolah', 'npsn');
+    }
+
+    public function pendaftaranPilihan2()
+    {
+        return $this->hasMany(Pendaftaran::class, 'pilihan2_sekolah', 'npsn');
+    }
 }
