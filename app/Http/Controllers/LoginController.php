@@ -19,8 +19,7 @@ class LoginController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nik' => 'required|max:16',
-            'password' => 'required|confirmed|min:3',
-            'confirm_password' => 'required'
+            'password' => 'required|min:3'
         ]);
 
         $dataLogin = [
@@ -30,7 +29,7 @@ class LoginController extends Controller
 
         if($validator->passes()) {
             if(Auth::attempt($dataLogin)){
-                return redirect()->route('welcomepage');
+                return redirect()->route('user.index');
             } else {
                 return redirect()->route('akun.login')->with('error', 'NIK atau Password salah.');
             }
@@ -50,7 +49,8 @@ class LoginController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nik' => 'required|max:16|unique:users',
-            'password' => 'required'
+            'password' => 'required|confirmed|min:3',
+            'confirm_password' => 'required'
         ]);
 
         $dataLogin = [
@@ -78,6 +78,7 @@ class LoginController extends Controller
         if(Auth::user()->role === 'admin'){
             Auth::guard('admin')->logout();
         } else {
+            session()->flush();
             Auth::logout();
         }      
         return redirect()->route('akun.login');

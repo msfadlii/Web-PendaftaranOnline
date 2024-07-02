@@ -16,8 +16,7 @@ class SiswaController extends Controller
 {
     public function index()
     {
-        $data_siswa = DetailUser::all();
-        return view('master-data.data-siswa.index', compact('data_siswa'));
+        return view('master-data.data-siswa.index');
     }
 
     public function show($nik)
