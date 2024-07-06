@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->string('nik')->primary();
             $table->string('password');
-            $table->enum('role', ['admin', 'user']);
+            $table->enum('role', ['admin', 'user'])->default('user');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -53,6 +53,11 @@ return new class extends Migration
             $table->string('kode');
         });
 
+        Schema::create('status', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_status');
+        });
+
         Schema::create('detail_users', function (Blueprint $table) {
             $table->string('users_nik');
             $table->string('nama');
@@ -69,6 +74,7 @@ return new class extends Migration
             $table->unsignedBigInteger('kodepos_id');
             $table->string('ortu');
             $table->string('no_hp');
+            $table->unsignedBigInteger('status_id')->default(3);
 
             $table->foreign('users_nik')->references('nik')->on('users')->onDelete('cascade'); //onDelete('cascade') untuk jika data di tabel users dihapus maka foreign key ikut terhapus
             $table->foreign('jk_id')->references('id')->on('jenis_kelamin');
@@ -77,37 +83,10 @@ return new class extends Migration
             $table->foreign('kecamatan_id')->references('id')->on('kecamatan');
             $table->foreign('kelurahan_id')->references('id')->on('kelurahan');
             $table->foreign('kodepos_id')->references('id')->on('kodepos');
+            $table->foreign('status_id')->references('id')->on('status');
 
             $table->timestamps();
         });
-
-        Schema::create('sekolah', function (Blueprint $table) {
-            $table->unsignedBigInteger('npsn')->primary();
-            $table->string('nama_sekolah');
-            $table->string('alamat_sekolah');
-            $table->unsignedBigInteger('provinsi_id');
-            $table->unsignedBigInteger('kota_id');
-            $table->unsignedBigInteger('kecamatan_id');
-            $table->unsignedBigInteger('kelurahan_id');
-            $table->unsignedBigInteger('kodepos_id');
-            $table->string('email');
-            $table->string('no_hp');
-            $table->integer('pagu');
-            $table->char('akreditasi');
-            $table->string('kepsek');
-
-            $table->foreign('provinsi_id')->references('id')->on('provinsi');
-            $table->foreign('kota_id')->references('id')->on('kota');
-            $table->foreign('kecamatan_id')->references('id')->on('kecamatan');
-            $table->foreign('kelurahan_id')->references('id')->on('kelurahan');
-            $table->foreign('kodepos_id')->references('id')->on('kodepos');
-        });
-
-        // Schema::create('password_reset_tokens', function (Blueprint $table) {
-        //     $table->string('email')->primary();
-        //     $table->string('token');
-        //     $table->timestamp('created_at')->nullable();
-        // });
 
         Schema::create('sessions', function (Blueprint $table) {
             $table->string('id')->primary();

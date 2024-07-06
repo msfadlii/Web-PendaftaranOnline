@@ -10,7 +10,6 @@ use App\Models\Kelurahan;
 use App\Models\KodePos;
 use App\Models\Kota;
 use App\Models\Provinsi;
-use App\Models\Sekolah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
@@ -25,19 +24,18 @@ class UserController extends Controller
     public function siswa_index()
     {
         $nik = Auth::user()->nik;
-        $siswa = DetailUser::with(['provinsi', 'kota', 'kecamatan', 'kelurahan', 'kodepos'])->where('users_nik', $nik)->first();
+        $siswa = DetailUser::with(['provinsi', 'kota', 'kecamatan', 'kelurahan', 'kodepos', 'status'])->where('users_nik', $nik)->first();
         return view('users.siswa.index', compact('siswa'));
-    }
-
-    public function sekolah_index()
-    {
-        $data_sekolah = Sekolah::all();
-
-        return view('users.sekolah.index', compact('data_sekolah'));
     }
 
     public function daftar_index()
     {
+        $nik = Auth::user()->nik;
+        $siswa = DetailUser::where('users_nik', $nik)->first();
+        if ($siswa) {
+            return redirect()->route('user.siswa.index')->with('status', 'NIK Anda sudah terdaftar.');
+        }
+
         $nik = Auth::user()->nik;
         $jenisKelamin = JenisKelamin::all();
         $provinsi = Provinsi::all();
@@ -87,11 +85,6 @@ class UserController extends Controller
             'no_hp' => $request->no_hp,
         ]);
 
-        return redirect()->route('user.siswa.index');
-    }
-
-    public function laporan_index()
-    {
-        return view('users.laporan.index');
+        return redirect()->route('user.siswa.index')->with('success-daftar', 'Selamat Pendaftaran telah Berhasil!');
     }
 }

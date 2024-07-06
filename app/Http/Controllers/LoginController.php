@@ -29,7 +29,7 @@ class LoginController extends Controller
 
         if($validator->passes()) {
             if(Auth::attempt($dataLogin)){
-                return redirect()->route('user.index');
+                return redirect()->route('user.index')->with('success', 'Login Berhasil!');
             } else {
                 return redirect()->route('akun.login')->with('error', 'NIK atau Password salah.');
             }
@@ -50,7 +50,7 @@ class LoginController extends Controller
         $validator = Validator::make($request->all(), [
             'nik' => 'required|max:16|unique:users',
             'password' => 'required|confirmed|min:3',
-            'confirm_password' => 'required'
+            'password_confirmation' => 'required'
         ]);
 
         $dataLogin = [

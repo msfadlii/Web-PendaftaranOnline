@@ -2,8 +2,62 @@
 @section('main-content')
 @if($siswa)
     <div class="container mt-5">
-        <div class="card">
-            <div class="card-header bg-primary text-white d-flex ">
+        @if(session('status'))
+            <div class="alert alert-info mt-3">
+                {{ session('status') }}
+            </div>
+        @endif
+        @if (session('success'))
+            <script>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Login Berhasil!',
+                    text: '{{ session('success') }}',
+                    showConfirmButton: false,
+                    timer: 3000
+                });
+            </script>
+        @endif
+        @if (session('success-daftar'))
+            <script>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Pendaftaran Berhasil!',
+                    text: '{{ session('success-daftar') }}',
+                    showConfirmButton: false,
+                    timer: 3000
+                });
+            </script>
+        @endif
+        <div class="alert
+        @if($siswa->status->nama_status == 'Diterima')
+            alert-success
+        @elseif($siswa->status->nama_status == 'Ditolak')
+            alert-danger
+        @else
+            alert-primary
+        @endif
+        d-flex align-items-center">
+            <h4 class="alert-heading mb-0" style="margin-left: 20px;">
+                @if($siswa->status->nama_status == 'Diterima')
+                    <i class="fas fa-check-circle"></i> <span class="ml-2">Selamat Anda Telah Diterima di SD 5</span>
+                @elseif($siswa->status->nama_status == 'Ditolak')
+                    <i class="fas fa-times-circle"></i> <span class="ml-2">Mohon Maaf Anda Belum Diterima, Tetap Semangat dan Jangan Berkecil Hati</span>
+                @else
+                    <i class="fas fa-spinner fa-spin"></i> <span class="ml-2">Mohon Tunggu Konfirmasi dari Admin</span>
+                @endif
+            </h4>
+        </div>
+        <div class="card"> 
+            <div class="card-header 
+            @if($siswa->status->nama_status == 'Diterima')
+                bg-success text-white
+            @elseif($siswa->status->nama_status == 'Ditolak')
+                bg-danger text-white
+            @else
+                bg-primary text-white
+            @endif 
+            text-white d-flex ">
                 <h2 class="mb-0" style="margin-left: 20px;">Data Siswa</h2>
             </div>
             <div class="card-body">

@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +16,26 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        $userData = [
+            [
+                'email' => 'Admin@gmail.com',
+                'name'=>'admin',
+                'role' => 'admin',
+                'password' => bcrypt('admin'),
+            ],  
+
+            [
+                'email' => 'siswa1@gmail.com',
+                'name'=>'budi',
+                'role' => 'siswa',
+                'password' => bcrypt('1'),
+            ]
+        ];
+        
+       
+        foreach($userData as $key => $val){
+            User::create($val);
+        }
         $this->call([
             UserSeeder::class,
             ProvinsiSeeder::class,
@@ -21,9 +43,9 @@ class DatabaseSeeder extends Seeder
             KecamatanSeeder::class,
             KelurahanSeeder::class,
             KodePosSeeder::class,
-            SekolahSeeder::class,
+            JenisKelaminSeeder::class,
+            StatusSeeder::class,
             SiswaSeeder::class,
-            PendaftaranSeeder::class,
         ]);
     }
 }

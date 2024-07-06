@@ -30,10 +30,10 @@ class LoginController extends Controller
             if(Auth::guard('admin')->attempt($dataLogin)){
                 if(Auth::guard('admin')->user()->role != "admin"){
                     Auth::guard('admin')->logout();
-                    return redirect()->route('admin.login')->with('error', 'Anda tidak memiliki akses.');
+                    return redirect()->route('admin.login')->with('error-akses', 'Anda tidak memiliki akses.');
                 }
 
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('admin.dashboard')->with('success', 'Login Berhasil!');
             } else {
                 return redirect()->route('admin.login')->with('error', 'Username atau Password salah.');
             }

@@ -8,9 +8,7 @@
                 <th scope="col">No.</th>
                 <th scope="col">NIK</th>
                 <th scope="col">Nama</th>
-                <th scope="col">Pilihan 1</th>
-                <th scope="col">Pilihan 2</th>
-                <th scope="col">Sekolah Diterima</th>
+                <th scope="col">Status</th>
                 <th scope="col">Opsi</th>
             </tr>
         </thead>
@@ -20,9 +18,7 @@
                 <th scope="row">{{ $index + 1 }}</th>
                 <th>{{ $daftar->users_nik }}</th>
                 <th>{{ $daftar->user->detailUser->nama }}</th>
-                <th>{{ $daftar->pilihan1Sekolah->nama_sekolah }}</th>
-                <th>{{ $daftar->pilihan2Sekolah->nama_sekolah }}</th>
-                <th>{{ $daftar->diterimaSekolah->nama_sekolah }}</th>
+                <th>{{ $daftar->status }}</th>
                 <th>
                     <form action="{{ route('pendaftaran.delete', $daftar->users_nik) }}" method="post" style="display:inline-block;">
                         @csrf

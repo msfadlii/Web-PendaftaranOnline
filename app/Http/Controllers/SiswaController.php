@@ -10,25 +10,27 @@ use App\Models\KodePos;
 use App\Models\Kota;
 use App\Models\Provinsi;
 use App\Models\Siswa;
+use App\Models\Status;
 use Illuminate\Http\Request;
 
 class SiswaController extends Controller
 {
     public function index()
     {
-        return view('master-data.data-siswa.index');
+        $data_siswa = DetailUser::all();
+        return view('master-data.data-siswa.index', compact('data_siswa'));
     }
 
     public function show($nik)
     {
-        $siswa = DetailUser::with(['provinsi', 'kota', 'kecamatan', 'kelurahan', 'kodepos'])->where('users_nik', $nik)->firstOrFail();
+        $siswa = DetailUser::with(['provinsi', 'kota', 'kecamatan', 'kelurahan', 'kodepos', 'status'])->where('users_nik', $nik)->firstOrFail();
 
         return view('master-data.data-siswa.show', compact('siswa'));
     }
 
     public function edit($nik)
     {   
-        $siswa = DetailUser::with(['jenisKelamin', 'provinsi', 'kota', 'kecamatan', 'kelurahan', 'kodepos'])->where('users_nik', $nik)->firstOrFail();
+        $siswa = DetailUser::with(['jenisKelamin', 'provinsi', 'kota', 'kecamatan', 'kelurahan', 'kodepos', 'status'])->where('users_nik', $nik)->firstOrFail();
 
         $jenisKelamin = JenisKelamin::all();
         $provinsi = Provinsi::all();
@@ -36,8 +38,9 @@ class SiswaController extends Controller
         $kecamatan = Kecamatan::all();
         $kelurahan = Kelurahan::all();
         $kodepos = KodePos::all();
+        $status = Status::all();
 
-        return view('master-data.data-siswa.edit', compact('siswa', 'jenisKelamin', 'provinsi', 'kota', 'kecamatan', 'kelurahan', 'kodepos'));
+        return view('master-data.data-siswa.edit', compact('siswa', 'jenisKelamin', 'provinsi', 'kota', 'kecamatan', 'kelurahan', 'kodepos', 'status'));
     }
 
     public function update(Request $request, $nik)
@@ -63,7 +66,7 @@ class SiswaController extends Controller
         $siswa = DetailUser::where('users_nik', $nik)->firstOrFail();
         $siswa->update($request->all());
 
-        return redirect()->route('siswa.index')->with('success', 'Data siswa berhasil diperbarui.');
+        return redirect()->route('siswa.index')->with('success-update', 'Data siswa berhasil diperbarui.');
     }
 
     public function destroy($nik)
@@ -73,5 +76,38 @@ class SiswaController extends Controller
         $siswa->delete();
 
         return redirect()->route('siswa.index')->with('success', 'Data siswa berhasil dihapus');
+    }
+
+    public function konfirmasi()
+    {
+        $data_siswa = DetailUser::all();
+        return view('master-data.konfirmasi.index', compact('data_siswa'));
+    }
+
+    public function confirm($nik)
+    {
+        $siswa = DetailUser::where('users_nik', $nik)->firstOrFail();
+        $siswa->status_id = 1;
+        $siswa->save();
+
+        return redirect()->back()->with('success', 'Siswa berhasil dikonfirmasi.');
+    }
+
+    public function reject($nik)
+    {
+        $siswa = DetailUser::where('users_nik', $nik)->firstOrFail();
+        $siswa->status_id = 2;
+        $siswa->save();
+
+        return redirect()->back()->with('reject', 'Konfirmasi Siswa ditolak.');
+    }
+
+    public function delete($nik)
+    {
+        $siswa = DetailUser::where('users_nik', $nik)->firstOrFail();
+        $siswa->status_id = 3;
+        $siswa->save();
+
+        return redirect()->back()->with('delete', 'Konfirmasi siswa berhasil dihapus.');
     }
 }
