@@ -1,7 +1,17 @@
 @extends('template')
 
 @section('main-content')
-
+@if (session('success'))
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Login Berhasil!',
+            text: '{{ session('success') }}',
+            showConfirmButton: false,
+            timer: 3000
+        });
+    </script>
+@endif
     <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
 
     <div class="row">

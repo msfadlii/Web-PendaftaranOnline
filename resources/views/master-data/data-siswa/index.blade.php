@@ -1,17 +1,6 @@
 @extends('template')
 @section('main-content')
 <h1 class="h3 mb-4 text-gray-800">Data Siswa</h1>
-@if (session('success'))
-    <script>
-        Swal.fire({
-            icon: 'success',
-            title: 'Login Berhasil!',
-            text: '{{ session('success') }}',
-            showConfirmButton: false,
-            timer: 3000
-        });
-    </script>
-@endif
 @if (session('success-update'))
     <script>
         Swal.fire({
