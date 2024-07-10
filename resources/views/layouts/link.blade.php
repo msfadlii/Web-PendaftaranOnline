@@ -14,3 +14,10 @@
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+{{-- mix.js('resources/js/app.js', 'public/js')
+   .sass('resources/sass/app.scss', 'public/css')
+   .js('node_modules/sweetalert2/src/sweetalert2.js', 'public/js/sweetalert2.js')
+   .sass('node_modules/sweetalert2/src/sweetalert2.scss', 'public/css/sweetalert2.css'); --}}

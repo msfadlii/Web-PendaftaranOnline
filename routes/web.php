@@ -23,34 +23,21 @@ Route::group(['prefix' => ''], function() {
     Route::group(['middleware' => 'auth'], function(){
         Route::get('home-page', [UserController::class, 'index'])->name('user.index');
         Route::get('siswa-page', [UserController::class, 'siswa_index'])->name('user.siswa.index');
-        Route::get('sekolah-page', [UserController::class, 'sekolah_index'])->name('user.sekolah.index');
         Route::get('daftar-page', [UserController::class, 'daftar_index'])->name('user.daftar.index');
         Route::post('daftar-store', [UserController::class, 'daftar_store'])->name('user.daftar.store');
 
-        Route::get('laporan-page', [UserController::class, 'laporan_index'])->name('user.laporan.index');
-
         Route::get('logout', [LoginController::class, 'logout'])->name('akun.logout');
-        
     });
 });
 
 Route::group(['prefix' => 'admin'], function() {
     Route::group(['middleware' => 'admin.guest'], function(){
-        Route::get('loginAdmin', [AdminsLoginController::class, 'index'])->name('admin.login');
+        Route::get('login', [AdminsLoginController::class, 'index'])->name('admin.login');
         Route::post('authenticate', [AdminsLoginController::class, 'authenticate'])->name('admin.autentikasi');
     });
     Route::group(['middleware' => 'admin.auth'], function(){
         Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-        Route::get('logoutAdmin', [AdminsLoginController::class, 'logout'])->name('admin.logout');
-        
-        //Sekolah
-        Route::get('data-sekolah', [AdminsSekolahController::class, 'index'])->name('sekolah.index');
-        Route::get('data-sekolah/{npsn}', [AdminsSekolahController::class, 'show'])->name('sekolah.show');
-        Route::get('create-sekolah', [AdminsSekolahController::class, 'create'])->name('sekolah.create');
-        Route::post('store-sekolah', [AdminsSekolahController::class, 'store'])->name('sekolah.store');
-        Route::get('edit-sekolah/{npsn}/edit', [AdminsSekolahController::class, 'edit'])->name('sekolah.edit');
-        Route::put('edit-sekolah/{npsn}', [AdminsSekolahController::class, 'update'])->name('sekolah.update');
-        Route::delete('delete-sekolah/{npsn}', [AdminsSekolahController::class, 'destroy'])->name('sekolah.delete');
+        Route::get('logout', [AdminsLoginController::class, 'logout'])->name('admin.logout');
 
         //Siswa
         Route::get('data-siswa', [SiswaController::class, 'index'])->name('siswa.index');
@@ -59,11 +46,10 @@ Route::group(['prefix' => 'admin'], function() {
         Route::put('edit-siswa/{users_nik}', [SiswaController::class, 'update'])->name('siswa.update');
         Route::delete('delete-siswa/{users_nik}', [SiswaController::class, 'destroy'])->name('siswa.delete');
 
-        //Pendaftaran
-        Route::get('pendaftaran-siswa', [PendaftaranController::class, 'index'])->name('pendaftaran.index');
-        Route::get('pendaftaran-siswa/{users_nik}', [PendaftaranController::class, 'show'])->name('pendaftaran.show');
-        Route::get('edit-pendaftaran/{users_nik}/edit', [PendaftaranController::class, 'edit'])->name('pendaftaran.edit');
-        Route::put('edit-pendaftaran/{users_nik}', [PendaftaranController::class, 'update'])->name('pendaftaran.update');
-        Route::delete('delete-pendaftaran/{users_nik}', [PendaftaranController::class, 'destroy'])->name('pendaftaran.delete');
+        //Konfirmasi
+        Route::get('konfirmasi-siswa', [SiswaController::class, 'konfirmasi'])->name('konfirm.index');
+        Route::post('konfirmasi-siswa/confirm/{nik}', [SiswaController::class, 'confirm'])->name('konfirm.confirm');
+        Route::post('konfirmasi-siswa/reject/{nik}', [SiswaController::class, 'reject'])->name('konfirm.reject');
+        Route::delete('konfirmasi-siswa/delete/{nik}', [SiswaController::class, 'delete'])->name('konfirm.delete');
     });
 });

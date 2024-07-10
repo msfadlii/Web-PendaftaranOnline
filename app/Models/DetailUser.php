@@ -29,6 +29,7 @@ class DetailUser extends Model
         'kodepos_id',
         'ortu',
         'no_hp',
+        'status_id',
     ];
 
     public function user()
@@ -64,5 +65,10 @@ class DetailUser extends Model
     public function kodepos()
     {
         return $this->belongsTo(Kodepos::class);
+    }
+    
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
     }
 }

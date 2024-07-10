@@ -3,7 +3,15 @@
 @section('main-content')
 <div class="container mt-5">
     <div class="card">
-        <div class="card-header bg-primary text-white d-flex ">
+        <div class="card-header 
+            @if($siswa->status->nama_status == 'Diterima')
+                bg-success text-white
+            @elseif($siswa->status->nama_status == 'Ditolak')
+                bg-danger text-white
+            @else
+                bg-primary text-white
+            @endif 
+            d-flex ">
             <a href="{{ route('siswa.index') }}" class="btn btn-secondary">
                 <i class="fas fa-arrow-left"></i> Kembali
             </a>
