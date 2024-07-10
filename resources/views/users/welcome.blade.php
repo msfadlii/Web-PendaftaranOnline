@@ -5,6 +5,7 @@
     <title>SDN Citraland 5</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
     <link rel="stylesheet" href="css/landing/open-iconic-bootstrap.min.css">
@@ -19,12 +20,22 @@
     <link rel="stylesheet" href="css/landing/style.css">
   </head>
   <body>
+=======
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
+    @include('layouts.link')
+</head>
+<body>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 	<div class="py-2 bg-primary">
     	<div class="container">
     		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
 	    		<div class="col-lg-12 d-block">
 		    		<div class="row d-flex">
 			    		<div class="col-md-5 pr-4 d-flex topper align-items-center">
+<<<<<<< HEAD
 							<div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="fa fa-map-marker"></span></div>
 						    <span class="text" style="white-space: nowrap;">198 Jalan Barat 21, Citraland Gang 5</span>
 					    </div>
@@ -34,6 +45,17 @@
 					    </div>
 					    <div class="col-md pr-4 d-flex topper align-items-center">
 							<div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="fa fa-phone"></span></div>
+=======
+			    			<div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
+						    <span class="text">198 Jalan Barat 21, Citraland Gang 5</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">email77@email.com</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 						    <span class="text">+62 8789 76892</span>
 					    </div>
 				    </div>
@@ -48,6 +70,7 @@
 				<span class="oi oi-menu"></span> Menu
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
+<<<<<<< HEAD
 				<ul class="navbar-nav ml-auto" >
 					<li class="nav-item active"><a href="index.html" class="nav-link pl-0">Beranda</a></li>
 					<li class="nav-item"><a href="about.html" class="nav-link" style="white-space: nowrap;">Tentang Kami</a></li>
@@ -71,6 +94,23 @@
     
 	<section class="home-slider owl-carousel">
 		<div class="slider-item" style="background-image: url('{{ asset('image/landing/Murid2.jpg') }}');">
+=======
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a href="#beranda" class="nav-link pl-0">Beranda</a></li>
+					<li class="nav-item"><a href="#about" class="nav-link">Tentang Kami</a></li>
+					<li class="nav-item"><a href="#pengajar" class="nav-link">Pengajar</a></li>
+					<li class="nav-item"><a href="#ekstra" class="nav-link">Ekstrakulikuler</a></li>
+					<li class="nav-item"><a href="#kontak" class="nav-link">Kontak</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- MENGGanti semua file harus sama seperti ini -->
+    <!-- END nav -->
+    
+	<section id="beranda" class="home-slider owl-carousel">
+		<div class="slider-item" style="background-image:url(images/Murid2.jpg);">
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
@@ -82,7 +122,11 @@
 			</div>
 		</div>
 	
+<<<<<<< HEAD
 		<div class="slider-item" style="background-image:url('{{ asset('image/landing/Murid3.jpg') }}');">
+=======
+		<div class="slider-item" style="background-image:url(images/Murid3.jpg);">
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
@@ -104,7 +148,11 @@
 				<div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-primary">
 					<div class="media block-6 d-block text-center">
 						<div class="icon d-flex justify-content-center align-items-center">
+<<<<<<< HEAD
 							<span class="fa fa-chalkboard-teacher"></span>
+=======
+							<span class="flaticon-teacher"></span>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">Guru Bersertifikat</h3>
@@ -115,7 +163,11 @@
 				<div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-tertiary">
 					<div class="media block-6 d-block text-center">
 						<div class="icon d-flex justify-content-center align-items-center">
+<<<<<<< HEAD
 							<span class="fa fa-book-reader"></span>
+=======
+							<span class="flaticon-reading"></span>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">Bimbingan Ekstrakurikuler</h3>
@@ -126,7 +178,11 @@
 				<div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-fifth">
 					<div class="media block-6 d-block text-center">
 						<div class="icon d-flex justify-content-center align-items-center">
+<<<<<<< HEAD
 							<span class="fa fa-book"></span>
+=======
+							<span class="flaticon-books"></span>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">Buku &amp; Perpustakaan</h3>
@@ -137,7 +193,11 @@
 				<div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-quarternary">
 					<div class="media block-6 d-block text-center">
 						<div class="icon d-flex justify-content-center align-items-center">
+<<<<<<< HEAD
 							<span class="fa fa-award"></span>
+=======
+							<span class="flaticon-diploma"></span>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">Sertifikasi</h3>
@@ -152,7 +212,11 @@
 	</section>
 	
 	<!-- TENTANG KAMI -->
+<<<<<<< HEAD
 	<<section class="ftco-section ftco-no-pt ftco-no-pb">
+=======
+	<section id="about" class="ftco-section ftco-no-pt ftco-no-pb">
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 		<div class="container">
 		  <div class="row">
 			<div class="col-md-5 order-md-last wrap-about py-5 wrap-about bg-light">
@@ -164,12 +228,20 @@
 			  </div>
 			</div>
 			<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
+<<<<<<< HEAD
 			  <h2 class="mb-4">Keunggulan yang Kami Tawarkan</h2>
+=======
+			  <h2 class="mb-4">Keuntungan yang Kami Tawarkan</h2>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			  <p>Kami menawarkan berbagai program dan fasilitas yang dirancang untuk mendukung perkembangan akademis dan non-akademis siswa. Dari keamanan hingga kegiatan ekstrakurikuler, kami memastikan setiap siswa mendapatkan perhatian dan dukungan yang mereka butuhkan.</p>
 			  <div class="row mt-5">
 				<div class="col-lg-6">
 				  <div class="services-2 d-flex">
+<<<<<<< HEAD
 					<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="fa fa-shield-alt"></span></div>
+=======
+					<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 					<div class="text">
 					  <h3>Keamanan Utama</h3>
 					  <p>Kami mengutamakan keamanan dan kesejahteraan siswa kami dengan sistem keamanan yang canggih dan staf yang terlatih.</p>
@@ -178,7 +250,11 @@
 				</div>
 				<div class="col-lg-6">
 				  <div class="services-2 d-flex">
+<<<<<<< HEAD
 				  	<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="fa fa-book-reader"></span></div>
+=======
+					<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 					<div class="text">
 					  <h3>Kelas Interaktif</h3>
 					  <p>Kelas kami dirancang untuk memberikan pengalaman belajar yang interaktif dan menyenangkan dengan kurikulum yang sesuai dengan kebutuhan siswa.</p>
@@ -187,7 +263,11 @@
 				</div>
 				<div class="col-lg-6">
 				  <div class="services-2 d-flex">
+<<<<<<< HEAD
 				  	<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="fa fa-award"></span></div>
+=======
+					<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 					<div class="text">
 					  <h3>Guru Bersertifikat</h3>
 					  <p>Guru-guru kami memiliki sertifikasi dan pelatihan yang memastikan mereka dapat memberikan pendidikan terbaik kepada siswa.</p>
@@ -196,7 +276,11 @@
 				</div>
 				<div class="col-lg-6">
 				  <div class="services-2 d-flex">
+<<<<<<< HEAD
 				  	<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="fa fa-school"></span></div>
+=======
+					<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 					<div class="text">
 					  <h3>Kelas yang Nyaman</h3>
 					  <p>Kami menyediakan ruang kelas yang nyaman dan dilengkapi dengan fasilitas modern untuk mendukung proses belajar mengajar.</p>
@@ -205,7 +289,11 @@
 				</div>
 				<div class="col-lg-6">
 				  <div class="services-2 d-flex">
+<<<<<<< HEAD
 				  <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="fa fa-puzzle-piece"></span></div>
+=======
+					<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-jigsaw"></span></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 					<div class="text">
 					  <h3>Pelajaran Kreatif</h3>
 					  <p>Kami menawarkan pelajaran kreatif yang mendorong siswa untuk berpikir out-of-the-box dan mengembangkan imajinasi mereka.</p>
@@ -214,7 +302,11 @@
 				</div>
 				<div class="col-lg-6">
 				  <div class="services-2 d-flex">
+<<<<<<< HEAD
 				  	<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="fa fa-child"></span></div>
+=======
+					<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-kids"></span></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 					<div class="text">
 					  <h3>Fasilitas Olahraga</h3>
 					  <p>Kami menyediakan fasilitas olahraga yang lengkap untuk mendukung perkembangan fisik dan kesehatan siswa.</p>
@@ -228,7 +320,11 @@
 	  </section>  
 
 <!-- GURU SERTIFIKASI -->
+<<<<<<< HEAD
 <section class="ftco-section ftco-no-pb">
+=======
+<section id="pengajar" class="ftco-section ftco-no-pb">
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 	<div class="container">
 	  <div class="row justify-content-center mb-5 pb-2">
 		<div class="col-md-8 text-center heading-section ftco-animate">
@@ -240,7 +336,11 @@
 		<div class="col-md-6 col-lg-3 ftco-animate">
 		  <div class="staff">
 			<div class="img-wrap d-flex align-items-stretch">
+<<<<<<< HEAD
 			  <div class="img align-self-stretch" style="background-image: url('{{ asset('image/landing/teacher-1.jpg') }}');"></div>
+=======
+			  <div class="img align-self-stretch" style="background-image: url(images/teacher-1.jpg);"></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			</div>
 			<div class="text pt-3 text-center">
 			  <h3>Bianca Wilson</h3>
@@ -248,10 +348,17 @@
 			  <div class="faded">
 				<p>Saya memiliki pengalaman lebih dari 10 tahun dalam mengajar matematika dan selalu berusaha memberikan pemahaman yang mendalam kepada siswa saya.</p>
 				<ul class="ftco-social text-center">
+<<<<<<< HEAD
 					<li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+=======
+				  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 				</ul>
 			  </div>
 			</div>
@@ -260,7 +367,11 @@
 		<div class="col-md-6 col-lg-3 ftco-animate">
 		  <div class="staff">
 			<div class="img-wrap d-flex align-items-stretch">
+<<<<<<< HEAD
 			  <div class="img align-self-stretch" style="background-image: url('{{ asset('image/landing/teacher-2.jpg') }}');"></div>
+=======
+			  <div class="img align-self-stretch" style="background-image: url(images/teacher-2.jpg);"></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			</div>
 			<div class="text pt-3 text-center">
 			  <h3>Mitch Parker</h3>
@@ -268,10 +379,17 @@
 			  <div class="faded">
 				<p>Saya berfokus pada pembelajaran Bahasa Inggris dengan metode interaktif yang membuat siswa merasa nyaman dan percaya diri.</p>
 				<ul class="ftco-social text-center">
+<<<<<<< HEAD
 					<li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+=======
+				  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 				</ul>
 			  </div>
 			</div>
@@ -280,7 +398,11 @@
 		<div class="col-md-6 col-lg-3 ftco-animate">
 		  <div class="staff">
 			<div class="img-wrap d-flex align-items-stretch">
+<<<<<<< HEAD
 			  <div class="img align-self-stretch" style="background-image: url('{{ asset('image/landing/teacher-3.jpg') }}');"></div>
+=======
+			  <div class="img align-self-stretch" style="background-image: url(images/teacher-3.jpg);"></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			</div>
 			<div class="text pt-3 text-center">
 			  <h3>Stella Smith</h3>
@@ -288,10 +410,17 @@
 			  <div class="faded">
 				<p>Saya sangat bersemangat dalam mengembangkan kreativitas siswa melalui berbagai kegiatan seni rupa dan desain grafis.</p>
 				<ul class="ftco-social text-center">
+<<<<<<< HEAD
 					<li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+=======
+				  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 				</ul>
 			  </div>
 			</div>
@@ -300,7 +429,11 @@
 		<div class="col-md-6 col-lg-3 ftco-animate">
 		  <div class="staff">
 			<div class="img-wrap d-flex align-items-stretch">
+<<<<<<< HEAD
 			  <div class="img align-self-stretch" style="background-image: url('{{ asset('image/landing/person_4.jpg') }}');"></div>
+=======
+			  <div class="img align-self-stretch" style="background-image: url(images/person_4.jpg);"></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			</div>
 			<div class="text pt-3 text-center">
 			  <h3>Monshe Henderson</h3>
@@ -308,10 +441,17 @@
 			  <div class="faded">
 				<p>Saya berkomitmen untuk membawa pengetahuan ilmiah kepada siswa dengan cara yang menyenangkan dan mudah dimengerti.</p>
 				<ul class="ftco-social text-center">
+<<<<<<< HEAD
 					<li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
 					<li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+=======
+				  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 				</ul>
 			  </div>
 			</div>
@@ -322,6 +462,7 @@
   </section>  
 
 <!--EKSTRAKULIKULER  -->
+<<<<<<< HEAD
 <section class="ftco-section">
 	<div class="container">
 	  <div class="row justify-content-center mb-5 pb-2">
@@ -332,11 +473,26 @@
 	  </div>
   
   
+=======
+<section id="ekstra" class="ftco-section">
+	<div class="container">
+	  <div class="row justify-content-center mb-5 pb-2">
+		<div class="col-md-8 text-center heading-section ftco-animate">
+		  <h2 class="mb-4"><span>Kursus</span> Kami</h2>
+		  <p>Terpisah mereka tinggal di. Sebuah sungai kecil bernama Duden mengalir di dekat tempat mereka dan menyediakan kebutuhan mereka dengan peraturan yang diperlukan. Ini adalah negara paradisematik</p>
+		</div>
+	  </div>
+  
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 	  <section class="ftco-section">
 		<div class="container">
 		  <div class="row">
 			<div class="col-md-6 course d-lg-flex ftco-animate">
+<<<<<<< HEAD
 			  <div class="img" style="background-image: url('{{ asset('image/landing/course-1.jpg') }}');"></div>
+=======
+			  <div class="img" style="background-image: url(images/course-1.jpg);"></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			  <div class="text bg-light p-4">
 				<h3><a href="#">Ekstrakulikuler Menggambar</a></h3>
 				<p class="subheading"><span>Waktu Kelas:</span> 10:00 - 11:00</p>
@@ -344,7 +500,11 @@
 			  </div>
 			</div>
 			<div class="col-md-6 course d-lg-flex ftco-animate">
+<<<<<<< HEAD
 			  <div class="img" style="background-image: url('{{ asset('image/landing/Futsal.jpg') }}');"></div>
+=======
+			  <div class="img" style="background-image: url(images/Futsal.jpg);"></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			  <div class="text bg-light p-4">
 				<h3><a href="#">Ekstrakulikuler Futsal</a></h3>
 				<p class="subheading"><span>Waktu Kelas:</span> 11:00 - 12:00</p>
@@ -352,7 +512,11 @@
 			  </div>
 			</div>
 			<div class="col-md-6 course d-lg-flex ftco-animate">
+<<<<<<< HEAD
 			  <div class="img" style="background-image: url('{{ asset('image/landing/Musik.jpg') }}');"></div>
+=======
+			  <div class="img" style="background-image: url(images/Musik.jpg);"></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			  <div class="text bg-light p-4">
 				<h3><a href="#">Ekstrakulikuler Musik</a></h3>
 				<p class="subheading"><span>Waktu Kelas:</span> 13:00 - 14:00</p>
@@ -360,7 +524,11 @@
 			  </div>
 			</div>
 			<div class="col-md-6 course d-lg-flex ftco-animate">
+<<<<<<< HEAD
 			  <div class="img" style="background-image: url('{{ asset('image/landing/basket.jpg') }}');"></div>
+=======
+			  <div class="img" style="background-image: url(images/basket.jpg);"></div>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 			  <div class="text bg-light p-4">
 				<h3><a href="#">Ekstrakulikuler Basket</a></h3>
 				<p class="subheading"><span>Waktu Kelas:</span> 14:00 - 15:00</p>
@@ -374,7 +542,11 @@
   </section>  
 	
 <!-- EXPERIENCE -->
+<<<<<<< HEAD
 <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url('{{ asset('image/landing/bg_4.jpg') }}');" data-stellar-background-ratio="0.5">
+=======
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);" data-stellar-background-ratio="0.5">
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
     <div class="container">
       <div class="row justify-content-center mb-5 pb-2">
         <div class="col-md-8 text-center heading-section heading-section-black ftco-animate">
@@ -408,7 +580,11 @@
                 <div class="icon"><span class="flaticon-doctor"></span></div>
                 <div class="text">
                   <strong class="number" data-number="564">0</strong>
+<<<<<<< HEAD
                   <span>Orang Tua Puas</span> 
+=======
+                  <span>Orang Tua Puas</span>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
                 </div>
               </div>
             </div>
@@ -442,7 +618,11 @@
           <div class="carousel-testimony owl-carousel">
             <div class="item">
               <div class="testimony-wrap d-flex">
+<<<<<<< HEAD
                 <div class="user-img mr-4" style="background-image: url('{{ asset('image/landing/Orang_tua1.jpg') }}')">
+=======
+                <div class="user-img mr-4" style="background-image: url(images/Orang_tua1.jpg)">
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
                 </div>
                 <div class="text ml-2 bg-light">
                   <span class="quote d-flex align-items-center justify-content-center">
@@ -456,7 +636,11 @@
             </div>
             <div class="item">
               <div class="testimony-wrap d-flex">
+<<<<<<< HEAD
                 <div class="user-img mr-4" style="background-image: url('{{ asset('image/landing/Orang_tua2.jpg') }}')">
+=======
+                <div class="user-img mr-4" style="background-image: url(images/Orang_tua2.jpg)">
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
                 </div>
                 <div class="text ml-2 bg-light">
                   <span class="quote d-flex align-items-center justify-content-center">
@@ -470,7 +654,11 @@
             </div>
             <div class="item">
               <div class="testimony-wrap d-flex">
+<<<<<<< HEAD
                 <div class="user-img mr-4" style="background-image: url('{{ asset('image/landing/Orang_tua4.jpg') }}')">
+=======
+                <div class="user-img mr-4" style="background-image: url(images/Orang_tua4.jpg)">
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
                 </div>
                 <div class="text ml-2 bg-light">
                   <span class="quote d-flex align-items-center justify-content-center">
@@ -484,7 +672,11 @@
             </div>
             <div class="item">
               <div class="testimony-wrap d-flex">
+<<<<<<< HEAD
                 <div class="user-img mr-4" style="background-image: url('{{ asset('image/landing/Orang_tua3.jpg') }}')">
+=======
+                <div class="user-img mr-4" style="background-image: url(images/Orang_tua3.jpg)">
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
                 </div>
                 <div class="text ml-2 bg-light">
                   <span class="quote d-flex align-items-center justify-content-center">
@@ -498,7 +690,11 @@
             </div>
             <div class="item">
               <div class="testimony-wrap d-flex">
+<<<<<<< HEAD
                 <div class="user-img mr-4" style="background-image: url('{{ asset('image/landing/Orang_tua5.jpg') }}');">
+=======
+                <div class="user-img mr-4" style="background-image: url(images/Orang_tua5.jpg)">
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
                 </div>
                 <div class="text ml-2 bg-light">
                   <span class="quote d-flex align-items-center justify-content-center">
@@ -520,30 +716,54 @@
     		<div class="container-wrap">
     			<div class="row no-gutters">
 					<div class="col-md-3 ftco-animate">
+<<<<<<< HEAD
 						<a href="images/Siswa1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url('{{ asset('image/landing/Siswa1.jpg') }}');">
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="fab fa-instagram"></span>
+=======
+						<a href="images/Siswa1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/Siswa1.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-instagram"></span>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
+<<<<<<< HEAD
 						<a href="images/Siswa2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url('{{ asset('image/landing/Siswa2.jpg') }}');">
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="fab fa-instagram"></span>
+=======
+						<a href="images/Siswa2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/Siswa2.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-instagram"></span>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
+<<<<<<< HEAD
 						<a href="images/Siswa3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url('{{ asset('image/landing/Siswa3.jpg') }}');">
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="fab fa-instagram"></span>
+=======
+						<a href="images/Siswa3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/Siswa3.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-instagram"></span>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
+<<<<<<< HEAD
 						<a href="images/Murid3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url('{{ asset('image/landing/Murid3.jpg') }}');">
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="fab fa-instagram"></span>
+=======
+						<a href="images/Murid3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/Murid3.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-instagram"></span>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
     					</div>
 						</a>
 					</div>
@@ -551,6 +771,39 @@
     		</div>
     </section>
 
+<<<<<<< HEAD
+=======
+	<!-- Bagian Kontak Informasi -->
+<section id="kontak" class="ftco-section contact-section">
+	<div class="container">
+	  <div class="row d-flex justify-content-center mb-5 contact-info">
+		<div class="col-md-8">
+		  <div class="row d-flex mb-5 contact-info">
+			<div class="col-md-4 d-flex justify-content-center">
+			  <div class="bg-light align-self-stretch box p-4 text-center">
+				<h3 class="mb-4">Alamat</h3>
+				<p>198 Jalan Barat 21, Citraland Gang 5</p>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex justify-content-center">
+			  <div class="bg-light align-self-stretch box p-4 text-center">
+				<h3 class="mb-4">Nomor Kontak</h3>
+				<p><a href="tel://1234567920">+62 8789 76892</a></p>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex justify-content-center">
+			  <div class="bg-light align-self-stretch box p-4 text-center">
+				<h3 class="mb-4">Alamat Email</h3>
+				<p><a href="mailto:email77@email.com">email77@email.com</a></p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
 <!-- FOOTER -->
 <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
@@ -560,10 +813,19 @@
             <h2 class="ftco-heading-2">Ada Pertanyaan?</h2>
             <div class="block-23 mb-3">
               <ul>
+<<<<<<< HEAD
 			  	<li><a href=""><span class="fa fa-map-marker-alt"></span><span class="text">198 Jalan Barat 21, Citraland Gang 5</span></a>
 				</li>
 				<li><a href="#"><span class="fa fa-phone"></span><span class="text">+62 8789 76892</span></a></li>
 				<li><a href="#"><span class="fa fa-envelope"></span><span class="text">email77@email.com</span></a></li>
+=======
+                <li>
+                  <span class="icon icon-map-marker"></span>
+                  <span class="text" style="display: block; white-space: nowrap;">198 Jalan Barat 21, Citraland Gang 5</span>
+                </li>
+                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+62 8789 76892</span></a></li>
+                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">email77@email.com</span></a></li>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
               </ul>
             </div>
           </div>
@@ -573,11 +835,19 @@
           <div class="ftco-footer-widget mb-5 ml-md-4">
             <h2 class="ftco-heading-2">Tautan</h2>
             <ul class="list-unstyled">
+<<<<<<< HEAD
 				<li><a href="index.html"><span class="fa fa-chevron-circle-right mr-2"></span>Beranda</a></li>
 				<li><a href="about.html"><span class="fa fa-chevron-circle-right mr-2"></span>Tentang Kami</a></li>
 				<li><a href="teacher.html"><span class="fa fa-chevron-circle-right mr-2"></span>Pengajar</a></li>
 				<li><a href="courses.html"><span class="fa fa-chevron-circle-right mr-2"></span>Ekstrakulikuler</a></li>
 				<li><a href="contact.html"><span class="fa fa-chevron-circle-right mr-2"></span>Kontak</a></li>
+=======
+              <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Beranda</a></li>
+              <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang Kami</a></li>
+              <li><a href="teacher.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Pengajar</a></li>
+              <li><a href="courses.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Kursus</a></li>
+              <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Kontak</a></li>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
             </ul>
           </div>
         </div>
@@ -586,11 +856,18 @@
           <div class="ftco-footer-widget mb-5">
             <h2 class="ftco-heading-2 mb-0">Terhubung Dengan Kami</h2>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+<<<<<<< HEAD
 				<li class="ftco-animate"><a href="#"><span class="fab fa-twitter"></span></a></li>
 				<li class="ftco-animate"><a href="#"><span class="fab fa-facebook"></span></a></li>
 				<li class="ftco-animate"><a href="#"><span class="fab fa-instagram"></span></a></li>
 			</ul>
 
+=======
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
           </div>
         </div>
       </div>
@@ -598,7 +875,11 @@
       <div class="row">
         <div class="col-md-12 text-center">
           <p>
+<<<<<<< HEAD
             Hak Cipta SDN CITRALAND 5 SURABAYA &copy; <script>document.write(new Date().getFullYear());</script> Semua hak dilindungi undang-undang <i class="fa fa-heart" aria-hidden="true"></i> oleh <a href="https://www.kemdikbud.go.id/" target="_blank" style="text-decoration: underline;">Kemendikbud</a>
+=======
+            Hak Cipta SDN CITRALAND 5 SURABAYA &copy; <script>document.write(new Date().getFullYear());</script> Semua hak dilindungi undang-undang <i class="icon-heart" aria-hidden="true"></i> oleh <a href="https://www.kemdikbud.go.id/" target="_blank" style="text-decoration: underline;">Kemendikbud</a>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
           </p>
         </div>
       </div>
@@ -613,6 +894,7 @@
     </svg>
   </div>
   
+<<<<<<< HEAD
   <script src="js/landing/jquery.min.js"></script>
   <script src="js/landing/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/landing/popper.min.js"></script>
@@ -631,3 +913,22 @@
   </body>
 
   </html>
+=======
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  </body>
+</html>
+>>>>>>> 0d9a92c039494bc90cb8959a35464a1245f26a96
