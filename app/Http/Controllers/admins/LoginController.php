@@ -47,6 +47,10 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::guard('admin')->logout();
+        // if(Auth::guard('admin')->user()->role == 'admin'){
+        //     Auth::logout();
+        // }
+
         return redirect()->route('admin.login');
     }
 }

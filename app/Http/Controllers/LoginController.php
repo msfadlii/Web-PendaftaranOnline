@@ -75,12 +75,11 @@ class LoginController extends Controller
 
     public function logout()
     {
-        if(Auth::user()->role === 'admin'){
-            Auth::guard('admin')->logout();
-        } else {
-            session()->flush();
+        // Auth::logout();    
+        if(Auth::user()->role == 'user'){
             Auth::logout();
-        }      
+        }
+
         return redirect()->route('akun.login');
     }
 }
